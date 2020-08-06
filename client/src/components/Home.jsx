@@ -12,7 +12,7 @@ const Home = (props) => {
 
   return (
     <Wrapper>
-      <h1>Home</h1>
+      <h1 style={{color: 'green'}}>Home</h1>
       <Link to="/about">
         <button>about</button>
       </Link>
