@@ -1,30 +1,29 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import Home from './Home';
-import About from './About';
-import Contact from './Contact';
+import { ThemeProvider } from '@material-ui/core/styles';
+import theme from '../../styles/theme';
 
-const AppWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-`;
+import Home from './Home/Home';
+import About from './About/About';
+import Contact from './Contact/Contact';
+
 
 const App = (props) => {
 
   return (
     <Router>
-      <AppWrapper>
+      <ThemeProvider theme={theme}>
+        <>
 
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/Contact" component={Contact} />
-        </Switch>
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/about" component={About} />
+            <Route path="/Contact" component={Contact} />
+          </Switch>
 
-      </AppWrapper>
+        </>
+      </ThemeProvider>
       </Router>
   );
 }
