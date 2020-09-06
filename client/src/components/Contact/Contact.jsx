@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-
-
 import { Typography, Button } from '@material-ui/core';
 
 import { useTheme } from '@material-ui/core/styles';
@@ -26,7 +24,7 @@ const Contact = (props) => {
         <Button
           color="secondary"
           variant="contained"
-          // className={classes.button}
+          className={classes.button}
         >
           about
         </Button>

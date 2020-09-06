@@ -8,20 +8,17 @@ import Home from './Home/Home';
 import About from './About/About';
 import Contact from './Contact/Contact';
 
-
 const App = (props) => {
 
   return (
     <Router>
       <ThemeProvider theme={theme}>
         <>
-
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/about" component={About} />
             <Route path="/Contact" component={Contact} />
           </Switch>
-
         </>
       </ThemeProvider>
       </Router>
