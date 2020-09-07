@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
@@ -12,9 +12,11 @@ import FormGroup from '@material-ui/core/FormGroup';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 
+import useStyles from './styles';
+import theme from '../../../styles/theme';
 
 const NavBar = () => {
-  const classes = useStyles();
+  const classes = useStyles(theme)();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
 
@@ -78,3 +80,5 @@ const NavBar = () => {
     </div>
   );
 }
+
+export default NavBar;
